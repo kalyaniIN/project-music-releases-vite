@@ -4,15 +4,15 @@ import { Album } from "./components/Album";
 console.log(data);
 
 export const App = () => {
-  const {albums} = data
+  const { albums } = data;
 
   return (
     <div className="app">
-      <h1>displaying something</h1>
-      {albums.items.map((album) => (
-       
-       <Album  key= {album.id} albumData={album} />
-    ))}
+      <div className="album-container">
+        {albums.items.map((album) => (
+          <Album key={album.id} album={album} />
+        ))}
+      </div>
     </div>
   );
 };

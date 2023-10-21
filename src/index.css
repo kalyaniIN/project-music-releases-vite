@@ -12,20 +12,119 @@ code {
     monospace;
 }
 
-/* Define the container for the albums */
+/* Container for the albums */
 .album-container {
   display: flex;
-  flex-wrap:wrap ;
+  flex-wrap: wrap;
   gap: 20px;
   padding: 20px;
-  
   margin: 0 auto;
+  justify-content: center;
 }
 
-/* Define styles for each album */
+
+/* Styles for each album */
 .album {
   border: 1px solid #ccc;
   padding: 10px;
-  
   background-color: #f0f0f0;
+  width: calc(25% - 20px);
+  /* Display 4 albums per row on desktop */
+  box-sizing: border-box;
+}
+
+/* Media query for tablets */
+@media (max-width: 768px) {
+  .album {
+    width: calc(50% - 20px);
+    /* Display 2 albums per row on tablets */
+  }
+}
+
+/* Media query for mobile */
+@media (max-width: 480px) {
+  .album {
+    width: 100%;
+    /* Display 1 album per row on mobile */
+  }
+}
+
+body {
+  background-color: black;
+  margin: 25px 50px;
+}
+
+/* ImageWithIcons.css */
+.image-with-icons-wrapper {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.main-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  filter: brightness(1);
+  transition: filter 0.3s ease;
+}
+
+.image-with-icons-wrapper:hover .main-image {
+  filter: brightness(0.8);
+}
+
+.icon-container {
+  display: flex;
+  justify-content: center;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 40%;
+  width: 100%;
+  transition: opacity 0.3s ease;
+  gap: 30px;
+}
+
+.image-with-icons-wrapper:hover .icon-container {
+  opacity: 1;
+}
+
+.icon-button {
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  width: 35px;
+}
+
+.icon {
+  transition: transform 0.3s ease;
+  filter: invert(1);
+}
+
+.icon:hover {
+  transform: scale(1.3);
+}
+
+.icon-container .like-icon img,
+.icon-container .dots-icon img {
+  width: 50px;
+  height: 50px;
+  opacity: 0.6;
+  margin: 0;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.icon-container .play-icon img {
+  width: 50px;
+  height: 50px;
+  opacity: 0.6;
+  margin: 0;
+
+  &:hover {
+    opacity: 1;
+  }
 }

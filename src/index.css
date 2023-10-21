@@ -36,3 +36,11 @@ code {
   color: #fff;
   padding: 10px;
 }
+
+.album:hover .icons {
+  display: flex;
+}
+
+.album:hover .image img {
+  filter: brightness(0.5); /* For making the image darker*/
+}

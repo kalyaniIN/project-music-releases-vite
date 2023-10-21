@@ -11,3 +11,21 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+/* Define the container for the albums */
+.album-container {
+  display: flex;
+  flex-wrap:wrap ;
+  gap: 20px;
+  padding: 20px;
+  
+  margin: 0 auto;
+}
+
+/* Define styles for each album */
+.album {
+  border: 1px solid #ccc;
+  padding: 10px;
+  
+  background-color: #f0f0f0;
+}

@@ -1,10 +1,9 @@
+import React from "react";
 import { AlbumName } from "./Album/AlbumName";
-import { ArtistName } from "./Album/ArtistName";
 import { CoverImage } from "./Album/CoverImage";
 
 export const Album = ({ album }) => {
   const { name, artists, images, external_urls } = album;
-  const artistNames = artists.map((artist) => artist.name).join(", ");
 
   const openSpotifyLink = (url) => {
     window.open(url, "_blank");
@@ -32,8 +31,27 @@ export const Album = ({ album }) => {
           rel="noopener noreferrer"
           onClick={() => openSpotifyLink(artists[0].external_urls.spotify)}
         >
-          <ArtistName artistName={artistNames} />
+          {artists[0].name}
         </a>
+        {artists.length > 1 && (
+          <React.Fragment>
+            {artists.slice(1).map((artist, index) => (
+              <React.Fragment key={artist.id}>
+                {" "}
+                {index === artists.length - 2 ? " & " : ", "}
+                <a
+                  href={artist.external_urls.spotify}
+                  className="artist-name"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => openSpotifyLink(artist.external_urls.spotify)}
+                >
+                  {artist.name}
+                </a>
+              </React.Fragment>
+            ))}
+          </React.Fragment>
+        )}
       </div>
     </div>
   );

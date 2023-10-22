@@ -62,11 +62,16 @@ code {
   text-decoration: none;
 }
 
-.album .artist-name {
+.album .artists {
   text-align: center;
   font-size: 14px;
   font-family: Helvetica, sans-serif;
-  color: #a0a0a0;
+  color: #a0a0a0; /* Set the default color for artist names */
+  text-decoration: none;
+}
+
+.album .artists a {
+  color: #fff; /* Change the color for clickable artist names */
   text-decoration: none;
 }
 
@@ -113,6 +118,7 @@ code {
   gap: 20px;
   opacity: 0;
   width: 100%;
+  transition: opacity 0.4s;
 }
 
 .album:hover .buttons-container {
@@ -128,11 +134,13 @@ code {
 .buttons-container img.icon {
   width: 30px;
   height: 30px;
-  filter: brightness(1) invert(1);
+  filter: brightness(0.7);
+  transition: filter 0.4s;
 }
 
 .buttons-container img.icon:hover {
   transform: scale(1.3);
+  filter: brightness(1);
 }
 
 .buttons-container button.icon.play {

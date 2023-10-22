@@ -1,5 +1,3 @@
-
-
 export const AlbumName = ({albumName}) => {
     
   return (
@@ -8,4 +6,3 @@ export const AlbumName = ({albumName}) => {
     </div>
   )
 }
-

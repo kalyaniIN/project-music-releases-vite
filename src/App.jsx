@@ -9,7 +9,7 @@ export const App = () => {
 
   return (
     <div className="app">
-      <Header /> {/* Add the Header component here */}
+      <Header />
       <div className="album-container">
         {albums.items.map((album) => (
           <Album key={album.id} album={album} />

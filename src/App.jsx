@@ -1,5 +1,6 @@
 import data from "./data.json";
 import { Album } from "./components/Album";
+import Header from "./components/Header";
 
 console.log(data);
 
@@ -8,6 +9,7 @@ export const App = () => {
 
   return (
     <div className="app">
+      <Header />
       <div className="album-container">
         {albums.items.map((album) => (
           <Album key={album.id} album={album} />

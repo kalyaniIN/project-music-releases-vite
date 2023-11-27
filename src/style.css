@@ -16,7 +16,7 @@ code {
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 25px;
-  margin: 25px 50px;
+  margin: 25px ;
 }
 
 /* Define styles for each album */
@@ -29,6 +29,7 @@ code {
   justify-content: center;
   transition: 0.4s;
   position: relative;
+ 
 }
 
 /* Apply brightness effect to album cover image on hover */
@@ -60,6 +61,7 @@ code {
   font-family: Helvetica, sans-serif;
   color: #ffffff;
   text-decoration: none;
+  text-transform: capitalize;
 }
 
 .album .artists {
@@ -186,3 +188,4 @@ code {
     width:100%
   }
 }
+

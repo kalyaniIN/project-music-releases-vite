@@ -31,6 +31,13 @@ code {
   position: relative;
  
 }
+img {
+  
+    height: auto;
+    max-width: 600px;
+    width: 100%;
+
+}
 
 /* Apply brightness effect to album cover image on hover */
 .album:hover .image img {
@@ -160,7 +167,7 @@ code {
 }
 
 /* Media Queries */
-@media (min-width: 750px) {
+@media (min-width: 667px) {
   .album-container {
     grid-template-columns: 1fr 1fr;
   }
@@ -174,18 +181,14 @@ code {
   }
 }
 
-@media (min-width: 1035px) {
+@media (min-width: 1025px) {
   .album-container {
-    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
   .buttons-container {
     gap: 8px;
   }
 }
 
-@media (max-width: 430px){
-  .image img{
-    width:100%
-  }
-}
+
 
